@@ -1,0 +1,15 @@
+    
+{
+    "format_version": 1,
+    "header": {
+        "name": "Equivalent Exchange 3",
+        "description": "This addon allows you to fly to space",
+        "uuid": "dc8eafa3-a5ab-48c6-a07e-477c420015ff",
+        "version": [0, 0, 1]
+    },
+    "modules": [{
+        "type": "data",
+        "uuid": "3ad1ea0d-64cd-48ff-9631-bdfce309dd30",
+        "version": [0, 0, 1]
+    }]
+}
