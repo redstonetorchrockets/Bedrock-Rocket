@@ -8,8 +8,18 @@
         "min_engine_version": [1, 2, 6]
     },
     "modules": [{
+        "description": "module",
         "type": "data",
+        "uuid": "235302ca-8934-11e9-bc42-526af7764f64",
+        "version": [0, 0, 1]
+    }, {
+        "description": "client-script",
+        "type": "client_data",
         "uuid": "3ad1ea0d-64cd-48ff-9631-bdfce309dd30",
+        "version": [0, 0, 1]
+    }],
+    "dependencies": [{
+        "uuid": "1f65addf-c6cb-4f1c-9414-a40051737e06",
         "version": [0, 0, 1]
     }]
 }
