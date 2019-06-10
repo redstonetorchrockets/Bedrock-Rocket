@@ -14,7 +14,7 @@
       ],
       "key": {
         "P": {
-          "item": "rtr:heat_resistant_plate.json"
+          "item": "rtr:heat_resistant_plate"
         },
         "T": {
           "item": "minecraft:piston"
