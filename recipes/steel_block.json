@@ -1,0 +1,25 @@
+{
+    "format_version": "1.12",
+    "minecraft:recipe_shaped": {
+      "description": {
+      "identifier": "rtr:steel_block"
+      },
+  
+      
+      "tags": [ "crafting_table" ],
+      "pattern": [
+        "###",
+        "###",
+        "###"
+      ],
+      "key": {
+        "#": {
+          "item": "rtr:steel_ingot"
+        }
+      },
+      "result": {
+        "item": "rtr:steel_block"
+      }
+    }
+  }
+  

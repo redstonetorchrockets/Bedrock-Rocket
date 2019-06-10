@@ -1,0 +1,29 @@
+{
+    "format_version": "1.12",
+    "minecraft:recipe_shaped": {
+      "description": {
+      "identifier": "rtr:fuel_tank"
+      },
+  
+      
+      "tags": [ "crafting_table" ],
+      "pattern": [
+        "X#X",
+        "# #",
+        "X#X"
+      ],
+      "key": {
+        "#": {
+          "item": "minecraft:glass_pane"
+        },
+        "X": {
+          "item": "minecraft:diamond"
+        }
+      },
+      "result": {
+        "item": "rtr:fuel_tank",
+        "count": 2
+      }
+    }
+  }
+  

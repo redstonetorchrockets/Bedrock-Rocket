@@ -1,0 +1,37 @@
+{
+    "format_version": "1.12",
+    "minecraft:recipe_shaped": {
+      "description": {
+      "identifier": "rtr:saturn_v"
+      },
+  
+      
+      "tags": [ "crafting_table" ],
+      "pattern": [
+        "PWP",
+        "PRP",
+        "GLG"
+      ],
+      "key": {
+        "P": {
+          "item": "rtr:heat_resistant_plate.json"
+        },
+        "W": {
+          "item": "rtr:control_unit"
+        },
+        "R": {
+          "item": "rtr:fuel_tank"
+        },
+        "G": {
+          "item": "rtr:double_engine"
+        },
+        "L": {
+          "item": "rtr:power_unit"
+        }
+      },
+      "result": {
+        "item": "rtr:saturn_v",
+        "count": 1
+      }
+    }
+}

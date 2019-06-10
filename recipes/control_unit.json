@@ -1,0 +1,37 @@
+{
+    "format_version": "1.12",
+    "minecraft:recipe_shaped": {
+      "description": {
+      "identifier": "rtr:control_unit"
+      },
+  
+      
+      "tags": [ "crafting_table" ],
+      "pattern": [
+        "PWP",
+        "PRP",
+        "GLG"
+      ],
+      "key": {
+        "P": {
+          "item": "rtr:heat_resistant_plate.json"
+        },
+        "W": {
+          "item": "rtr:wireless_controller"
+        },
+        "R": {
+          "item": "minecraft:redstone_block"
+        },
+        "G": {
+          "item": "minecraft:glowstone_dust"
+        },
+        "L": {
+          "item": "minecraft:lapis_lazuli"
+        }
+      },
+      "result": {
+        "item": "rtr:control_unit",
+        "count": 1
+      }
+    }
+}

@@ -1,0 +1,15 @@
+{
+    "format_version": "1.12",
+    "minecraft:recipe_furnace": {
+      "description": {
+      "identifier": "rtr:steel_ingot"
+      },
+  
+      
+      "tags": ["blast_furnace"],
+      "input": "rtr:raw_steel",
+      "output": "rtr:steel_ingot"
+    }
+    
+  }
+  

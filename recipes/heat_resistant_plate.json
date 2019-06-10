@@ -1,0 +1,31 @@
+{
+    "format_version": "1.12",
+    "minecraft:recipe_shaped": {
+      "description": {
+      "identifier": "rtr:heat_resistant_plate"
+      },
+  
+      
+      "tags": [ "crafting_table" ],
+      "pattern": [
+        "GGG",
+        "PRP",
+        "GGG"
+      ],
+      "key": {
+        "P": {
+          "item": "rtr:steel_ingot"
+        },
+        "R": {
+          "item": "minecraft:obsidian"
+        },
+        "G": {
+          "item": "minecraft:glass_pane"
+        }
+      },
+      "result": {
+        "item": "rtr:heat_resistant_plate",
+        "count": 2
+      }
+    }
+}
