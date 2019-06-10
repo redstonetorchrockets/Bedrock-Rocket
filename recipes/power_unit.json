@@ -17,7 +17,7 @@
           "item": "rtr:heat_resistant_plate.json"
         },
         "W": {
-          "item": "rtr:fluid_tank"
+          "item": "rtr:fuel_tank"
         },
         "R": {
           "item": "minecraft:furnace"
