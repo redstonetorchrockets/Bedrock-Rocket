@@ -17,7 +17,7 @@
           "item": "minecraft:iron_ingot"
         },
         "W": {
-          "item": "minecraft:coal"
+          "item": "rtr:coke_coal"
         }
       },
       "result": {
