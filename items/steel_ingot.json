@@ -1,0 +1,13 @@
+{
+    "format_version": "1.10",
+    "minecraft:item": {
+        "description": {
+            "identifier": "rtr:steel_ingot"
+
+        },
+
+        "components": {
+            "minecraft:stacked_by_data": true
+        }
+    }
+}
