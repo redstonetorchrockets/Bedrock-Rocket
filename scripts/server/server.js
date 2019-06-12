@@ -11,7 +11,7 @@ serverSystem.onPick = function(eventData) {
 };
 
 serverSystem.onRiding = function(eventData) {
-    this
+    this.runCommand("say §aRiding!§r");
 }
 
 serverSystem.update = function() {
