@@ -2,7 +2,7 @@
     "format_version": "1.10.0",
     "minecraft:entity": {
         "description": {
-            "identifier": "rtr:rocket",
+            "identifier": "rtr:v2",
             "is_spawnable": true,
             "is_summonable": true,
             "is_experimental": true
@@ -12,10 +12,10 @@
                 "has_gravity": true
             },
             "minecraft:scale": {
-                "value": 1
+                "value": 3
             },
             "minecraft:rideable": {
-                "seat_count": 30,
+                "seat_count": 3,
                
                 "seats": {
                     "position": [ -0.125, 10, -0.125 ]
