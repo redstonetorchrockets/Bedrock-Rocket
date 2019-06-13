@@ -15,7 +15,7 @@
                 "value": 1
             },
             "minecraft:rideable": {
-                "seat_count": 30,
+                "seat_count": 3,
                
                 "seats": {
                     "position": [ -0.125, 10, -0.125 ]

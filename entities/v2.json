@@ -12,7 +12,7 @@
                 "has_gravity": true
             },
             "minecraft:scale": {
-                "value": 3
+                "value": 3.6
             },
             "minecraft:rideable": {
                 "seat_count": 3,
@@ -22,8 +22,8 @@
                  }
               },
             "minecraft:collision_box": {
-                "width": 3,
-                "height": 100
+                "width": 1,
+                "height": 1
             }
         }
     }
