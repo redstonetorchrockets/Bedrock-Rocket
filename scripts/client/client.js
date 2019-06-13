@@ -59,7 +59,7 @@ ClientSystem.onPick = function(eventData) {
 };
 
 ClientSystem.onLookingAt = function(eventData) {
-    if (eventData.position !== null && eventData.data.entity.__identifier__ !== "rtr:rocket") {
+    if (eventData.position !== null && eventData.data.entity.__identifier__ == "rtr:rocket" && globalVars.lookingAtRocket) {
         let loadEventData = this.createEventData("minecraft:load_ui");
         loadEventData.data.path = "lookingAtRocket.html";
         loadEventData.data.options.is_showing_menu = false;
@@ -67,9 +67,11 @@ ClientSystem.onLookingAt = function(eventData) {
         loadEventData.data.options.should_steal_mouse = true;
         loadEventData.data.options.render_game_behind = true;
         ClientSystem.broadcastEvent("minecraft:load_ui", loadEventData);
-    } else if (eventData.position == null || eventData.data.entity.__identifier__ == "rtr:rocket") {
-        let unloadEventData = this.createEventData("minecraft:unload_ui");
-        unloadEventData.data.path = "lookingAtRocket.html";
-        this.broadcastEvent("minecraft:unload_ui", unloadEventData);
+    } else {
+        if (eventData.position == null || eventData.data.entity.__identifier__ !== "rtr:rocket") {
+            let unloadEventData = this.createEventData("minecraft:unload_ui");
+            unloadEventData.data.path = "lookingAtRocket.html";
+            this.broadcastEvent("minecraft:unload_ui", unloadEventData);
+        }
     }
 }
