@@ -3,6 +3,7 @@ var ClientSystem = client.registerSystem(0, 0);
 
 let globalVars = {};
 globalVars.lookingAtRocket = false;
+globalVars.position = null;
 
 ClientSystem.initialize = function() {
     this.listenForEvent("minecraft:ui_event", (eventData) => this.onUIMessage(eventData));
@@ -29,8 +30,12 @@ ClientSystem.onUIMessage = function(eventDataObject) {
         let unloadEventData = this.createEventData("minecraft:unload_ui");
         unloadEventData.data.path = "test.html";
         this.broadcastEvent("minecraft:unload_ui", unloadEventData);
+    } else if (eventData == "leaveRocket") {
+        this.broadcastEvent("minecraft:display_chat_event", "§eAddon by §cRedstoneTorchRockets§9 Visit §brtr.logilutions.de§r!");
+        let unloadEventData = this.createEventData("minecraft:unload_ui");
         unloadEventData.data.path = "lookingAtRocket.html";
         this.broadcastEvent("minecraft:unload_ui", unloadEventData);
+    } else if (eventData == "readyForRocket") {
         globalVars.lookingAtRocket = false;
     } else if (eventData == "visitWebsite") {
         this.location.href = "http://rtr.logilutions.de";
@@ -54,18 +59,17 @@ ClientSystem.onPick = function(eventData) {
 };
 
 ClientSystem.onLookingAt = function(eventData) {
-    if (eventData.data.entity.__identifier__ == "rtr:rocket" && !globalVars.lookingAtRocket) {
+    if (eventData.position !== null && eventData.data.entity.__identifier__ !== "rtr:rocket") {
         let loadEventData = this.createEventData("minecraft:load_ui");
         loadEventData.data.path = "lookingAtRocket.html";
         loadEventData.data.options.is_showing_menu = false;
         loadEventData.data.options.absorbs_input = false;
-        loadEventData.data.options.should_steal_mouse = false;
+        loadEventData.data.options.should_steal_mouse = true;
         loadEventData.data.options.render_game_behind = true;
         ClientSystem.broadcastEvent("minecraft:load_ui", loadEventData);
-        globalVars.lookingAtRocket = true;
-    } else {
-        if (eventData.data.entity.__identifier__ != "rtr:rocket" && globalVars.lookingAtRocket) {
-            globalVars.lookingAtRocket = false;
-        }
+    } else if (eventData.position == null || eventData.data.entity.__identifier__ == "rtr:rocket") {
+        let unloadEventData = this.createEventData("minecraft:unload_ui");
+        unloadEventData.data.path = "lookingAtRocket.html";
+        this.broadcastEvent("minecraft:unload_ui", unloadEventData);
     }
 }
