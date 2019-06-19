@@ -65,7 +65,7 @@ clientSystem.onRocket = function(eventData) {
         loadEventData.data.options.should_steal_mouse = true;
         loadEventData.data.options.render_game_behind = true;
         clientSystem.broadcastEvent("minecraft:load_ui", loadEventData);
-        globalVars.rocket = false;
+        globalVars.rocket = true;
     }
 }
 
@@ -75,7 +75,7 @@ clientSystem.onLeftRocket = function(eventData) {
         let unloadEventData = this.createEventData("minecraft:unload_ui");
         unloadEventData.data.path = "cockpit.html";
         this.broadcastEvent("minecraft:unload_ui", unloadEventData);
-        globalVars.rocket = true;
+        globalVars.rocket = false;
     }
 }
 
