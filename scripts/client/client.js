@@ -36,8 +36,21 @@ clientSystem.onUIMessage = function(eventDataObject) {
         let unloadEventData = this.createEventData("minecraft:unload_ui");
         unloadEventData.data.path = "cockpit.html";
         this.broadcastEvent("minecraft:unload_ui", unloadEventData);
-    } else if (eventData == "readyForRocket") {
-        globalVars.lookingAtRocket = false;
+    } else if (eventData == "launchRocket") {
+        //unload fixed cursor ui
+        let unloadEventData = this.createEventData("minecraft:unload_ui");
+        unloadEventData.data.path = "cockpit.html";
+        this.broadcastEvent("minecraft:unload_ui", unloadEventData);
+
+        //load unfixed cursor ui
+        let loadEventData = this.createEventData("minecraft:load_ui");
+        loadEventData.data.path = "cockpit.html";
+        loadEventData.data.options.is_showing_menu = false;
+        loadEventData.data.options.absorbs_input = false;
+        loadEventData.data.options.should_steal_mouse = true;
+        loadEventData.data.options.render_game_behind = true;
+        clientSystem.broadcastEvent("minecraft:load_ui", loadEventData);
+        this.sendMsg("§eLaunching Rocket...§r");
     } else if (eventData == "visitWebsite") {
         this.location.href = "http://rtr.logilutions.de";
     }
@@ -62,8 +75,8 @@ clientSystem.onRocket = function(eventData) {
         loadEventData.data.path = "cockpit.html";
         loadEventData.data.options.is_showing_menu = false;
         loadEventData.data.options.absorbs_input = false;
-        loadEventData.data.options.should_steal_mouse = true;
-        loadEventData.data.options.render_game_behind = true;
+        loadEventData.data.options.should_steal_mouse = false;
+        loadEventData.data.options.render_game_behind = false;
         clientSystem.broadcastEvent("minecraft:load_ui", loadEventData);
         globalVars.rocket = true;
     }
