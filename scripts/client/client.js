@@ -76,7 +76,7 @@ clientSystem.onRocket = function(eventData) {
         loadEventData.data.options.is_showing_menu = false;
         loadEventData.data.options.absorbs_input = false;
         loadEventData.data.options.should_steal_mouse = false;
-        loadEventData.data.options.render_game_behind = false;
+        loadEventData.data.options.render_game_behind = true;
         clientSystem.broadcastEvent("minecraft:load_ui", loadEventData);
         globalVars.rocket = true;
     }
